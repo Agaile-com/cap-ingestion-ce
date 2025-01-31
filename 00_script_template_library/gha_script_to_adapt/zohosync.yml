@@ -1,0 +1,134 @@
+name: Zoho Desk sync
+run-name: Zoho Desk data sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+env:
+  PIPENV_VENV_IN_PROJECT: 1
+  LANG: en_US.UTF-8
+  DEV_ROLE_ARN: arn:aws:iam::625380347171:role/cat-shared-scraper-role
+  PROD_ROLE_ARN: arn:aws:iam::807844659622:role/cat-shared-scraper-role
+  SECRET_SUFFIX: "-scraper-secrets"
+  BUCKET_PREFIX: "cat-shared-scraper-data"
+
+jobs:
+  sync:
+    runs-on: [self-hosted, cat_tenants]
+    timeout-minutes: 60
+    strategy:
+      max-parallel: 3
+      fail-fast: false
+      matrix:
+        project_name: # format: "environment:project_dir_name"
+          #- "DEV:CAT-BE-DEV"
+          - "DEV:CAT-AIA-ZOHO-DEMO-DEV"
+          - "DEV:CAT-KS-DEV"
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup role ARN based on environment
+      id: role-arn
+      run: |
+        ENV=`echo ${{ matrix.project_name }} | cut -d: -f1`
+        if [[ "$ENV" == "PROD" ]]; then
+          echo "ROLE_ARN=$PROD_ROLE_ARN" >> $GITHUB_OUTPUT
+        elif [[ "$ENV" == "DEV" ]]; then
+          echo "ROLE_ARN=$DEV_ROLE_ARN" >> $GITHUB_OUTPUT
+        else
+          echo "Environment should be 'DEV' or 'PROD' - we got: $ENV"
+          exit 1
+        fi
+    - name: Variable conversions
+      id: conversions
+      run: |
+        # extract the project directory name
+        PROJECT_DIR=`echo ${{ matrix.project_name }} | cut -d: -f2`
+        echo "PROJECT_DIR=$PROJECT_DIR" >> $GITHUB_OUTPUT
+        # the AWS Secrets Manager secret (and tenant) name is the project directory name in lowercase without the -DEV suffix. So convert to lower case and remove the last -dev suffix
+        echo "SECRET_NAME=${PROJECT_DIR,,}$SECRET_SUFFIX" | sed 's/\(.*\)-dev/\1/' >> $GITHUB_OUTPUT
+        echo "TENANT_NAME=${PROJECT_DIR,,}" | sed 's/\(.*\)-dev/\1/' >> $GITHUB_OUTPUT
+    - uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ steps.role-arn.outputs.ROLE_ARN }}
+        aws-region: eu-central-1
+        role-session-name: "GitHubActions_${{ github.triggering_actor }}"
+    - uses: aws-actions/aws-secretsmanager-get-secrets@v2
+      with:
+        secret-ids: |
+          ,${{ steps.conversions.outputs.SECRET_NAME }}
+        parse-json-secrets: true
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12.3'
+    - name: Install necessary Python packages
+      run: |
+        pip install pipenv awscli
+    - name: Find S3 bucket name based on BUCKET_PREFIX
+      id: s3-bucket
+      run: |
+        S3_BUCKET_NAME=$(aws s3api list-buckets --query "Buckets[?starts_with(Name, '${BUCKET_PREFIX}')].Name" --output text|head -n1)
+        echo $S3_BUCKET_NAME | grep $BUCKET_PREFIX || exit 1
+        echo "S3_BUCKET_NAME=$S3_BUCKET_NAME" >> $GITHUB_OUTPUT
+    - name: Execute update_cycle_GHA
+      run: |
+        CREATE_TUNNEL=`realpath tools/github_actions/create_tunnel.sh`
+        cd Project/${{ steps.conversions.outputs.PROJECT_DIR }}/zoho_desk_sync/update_cycle_GHA
+        echo "Recursive rename all .env_gha to .env under $PWD..."
+        find . -type f -name ".env_gha" -exec sh -c 'mv -f -v "$1" "$(dirname "$1")/.env"' _ {} \;
+        pipenv install
+        echo "Looking for run_update.sh at $PWD..."
+        for script in run_update.sh; do
+          if [[ -s $script ]] && [[ $(file -b $script) == "Bourne-Again shell script"* ]]; then
+            echo "Installing session-manager-plugin..."
+            curl -s "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+            sudo dpkg -i session-manager-plugin.deb
+            MAX_ATTEMPTS=4
+            ATTEMPT=1
+            echo "Starting tunnel process..."
+            bash $CREATE_TUNNEL > tunnel.log &
+            CREATE_TUNNEL_PID=$!
+            echo "Tunnel process started with PID $CREATE_TUNNEL_PID"
+            echo "Registering cleanup trap..."
+            trap "kill $CREATE_TUNNEL_PID" EXIT SIGINT SIGTERM
+            echo "Waiting for tunnel to open..."
+            sleep 5
+            ls -l tunnel.log
+            if [ ! -f tunnel.log ]; then
+              echo "Tunnel log file was not created - exiting."
+              exit 1
+            fi
+            while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
+              echo "Checking if tunnel is up..."
+              cat tunnel.log
+              CONNECTED=`grep "Waiting for connections" tunnel.log | wc -l`
+              if [ $CONNECTED -eq 1 ]; then
+                echo "Tunnel up, proceeding with the script execution."
+                echo -e "\033[1;32mRunning $script\033[0m"
+                pipenv run bash $script
+                break
+              else
+                echo "Tunnel is not open yet with attempt $ATTEMPT of $MAX_ATTEMPTS."
+                if [ $ATTEMPT -eq $MAX_ATTEMPTS ]; then
+                    echo "Tunnel did not open within the expected timeframe - exiting."
+                    exit 1
+                fi
+                ((ATTEMPT++))
+                sleep 5
+              fi
+            done
+          else
+            echo "Skipping $script as validity check failed."
+          fi
+        done
+      env:
+        TENANT_NAME: ${{ steps.conversions.outputs.TENANT_NAME }}
+        S3_BUCKET_NAME: ${{ steps.s3-bucket.outputs.S3_BUCKET_NAME }}
+    - name: Send failure notification to Slack
+      if: failure()
+      run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":":exclamation: Workflow run has failed! Workflow: ${{ github.workflow }} by ${{ github.triggering_actor }}. Log URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' ${{ env.SLACK_WEBHOOK_URL }}
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

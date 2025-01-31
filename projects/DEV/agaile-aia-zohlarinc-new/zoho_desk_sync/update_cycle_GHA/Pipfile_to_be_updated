@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+requests = "==2.31.0"
+boto3 = "==1.34.99"
+load-dotenv = "==0.1.0"
+tqdm = "==4.66.2"
+dspy = "==0.1.5"
+langchain = "==0.1.13"
+psycopg2-binary = "==2.9.9"
+pgvector = "==0.2.5"
+jq = "==1.7.0"
+beautifulsoup4 = "==4.12.3"
+
+[requires]
+python_version = "3.12"

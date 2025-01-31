@@ -1,0 +1,5 @@
+.DS_Store
+10_tools/ragas/ragas_with_ai_generated_questions/azure_openai_usage.log
+.env
+*.log
+/10_tools/langsmith_eval/.venv

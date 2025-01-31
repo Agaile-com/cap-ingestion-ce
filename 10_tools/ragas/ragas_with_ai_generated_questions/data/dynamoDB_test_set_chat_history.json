@@ -1,0 +1,326 @@
+[
+    {
+        "messages_token_size": 0.0,
+        "rate": "0.0",
+        "template": "default",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTEyNzI0",
+        "HumanMessage": "How big is the zholarMarry XL inverter?",
+        "trace_id": "67613a18f74ea51991357b69b083eb01",
+        "chat_id": "CHAT_ID_RAGAS_1269273",
+        "used_messages_of_all": "1 / 1",
+        "enrichment": "\n\n\"The size of the inverter varies depending on the size of the package. The 8 kW inverter for zholarMarry XL requires approximately 55x50x15 cm of space and is intended for wall mounting. The inverters for zholarMax or zholarMarry are slightly smaller, while the zholarMarry XXL is slightly larger.\"\n\n\"The Zholar PV packages are designed so that a sensibly sized system can be selected for every typical need in the private sector (ZholarMax 3 kWp, Zholar Marie 5 kWp, ZholarMarry XL 8 kWp and ZholarMarry XXL 10 kWp). We currently do not offer any larger packages. However, during the installation, the installation of up to two additional modules can be agreed upon in coordination with the installation partner (Zholar network applications remain unaffected by this).\"\n\n\"Yes, the inverter used by Zholar is ready for use with storage. You can also make the Zholar PV basic package even more powerful during your order by expanding the storage with ZholarSissi (5, 10, and 15 kWh capacity). The PV system and storage are usually installed together. Alternatively, storage can be easily and conveniently retrofitted to an existing Zholar PV system at any time.\"",
+        "user_id": "USER_ID_RAGAS_2980885",
+        "vector_results": [
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000440454/en",
+                "score": 0.8572866480217924,
+                "combined_text": "photovoltaics i - how much space do need in the house for inverter inverter? size",
+                "id": "1033917000000440454",
+                "title": "Photovoltaics - How much space do I need in the house for the inverter?",
+                "content": "The size of the inverter varies depending on the size of the package. The 8 kW inverter for zholarMarry XL requires approximately 55x50x15 cm of space and is intended for wall mounting. The inverters for zholarMax or zholarMarry are slightly smaller, while the zholarMarry XXL is slightly larger."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000484830/en",
+                "score": 0.5873020681970499,
+                "combined_text": "photovoltaics i - would like an even larger pv system. is this possible and how do proceed? zholar packages installation partner",
+                "id": "1033917000000484830",
+                "title": "Photovoltaics - I would like an even larger PV system. Is this possible and how do I proceed?",
+                "content": "The Zholar PV packages are designed so that a sensibly sized system can be selected for every typical need in the private sector (ZholarMax 3 kWp, Zholar Marie 5 kWp, ZholarMarry XL 8 kWp and ZholarMarry XXL 10 kWp). We currently do not offer any larger packages. However, during the installation, the installation of up to two additional modules can be agreed upon in coordination with the installation partner (Zholar network applications remain unaffected by this)."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000445774/en",
+                "score": 0.5836820417986199,
+                "combined_text": "photovoltaics a - can battery storage be retrofitted? zholar",
+                "id": "1033917000000445774",
+                "title": "Photovoltaics - Can a Battery Storage Be Retrofitted?",
+                "content": "Yes, the inverter used by Zholar is ready for use with storage. You can also make the Zholar PV basic package even more powerful during your order by expanding the storage with ZholarSissi (5, 10, and 15 kWh capacity). The PV system and storage are usually installed together. Alternatively, storage can be easily and conveniently retrofitted to an existing Zholar PV system at any time."
+            }
+        ],
+        "AIMessage_token_num": 0.0,
+        "AIMessage": "Die Abmessungen des Wechselrichters für das zholarMarry XL Paket betragen ca. 55x50x15 cm. Er ist für die Wandmontage vorgesehen. Der Wechselrichter hat eine Leistung von 8 kW.",
+        "HumanMessage_token_num": 0.0,
+        "msg_epoch_time": 1734425112724.0,
+        "readable_date": "2024-12-17 09:45:12"
+    },
+    {
+        "user_id": "USER_ID_RAGAS_2980885",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTEyNTY3",
+        "AIMessage_token_num": 0.0,
+        "HumanMessage": "Hi!",
+        "AIMessage": "Hallo, ich bin dein persönlicher Assistent. Wie kann ich dir helfen?",
+        "HumanMessage_token_num": 0.0,
+        "chat_id": "CHAT_ID_RAGAS_1269273",
+        "msg_epoch_time": 1734425112567.0,
+        "readable_date": "2024-12-17 09:45:12"
+    },
+    {
+        "messages_token_size": 0.0,
+        "rate": "0.0",
+        "template": "default",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTA2NjI2",
+        "HumanMessage": "What does zholar system installation involve?",
+        "trace_id": "67613a12571a21bedb22d21a1d49bf66",
+        "chat_id": "CHAT_ID_RAGAS_5472494",
+        "used_messages_of_all": "1 / 1",
+        "enrichment": "\n\n\"The installation, activation, and configuration are carried out by the Zholar installation partner, usually during the PV installation.\"\n\n\"The zholar package is designed so that a typical installation can be carried out without additional costs. Specifically, if you wish to supply an entire circuit of the house installation instead of the PV point, additional efforts arise, which are communicated by the zholar installation partner if necessary and billed separately by them.\"\n\n\"Of course! After the installation and handover of the ready-to-use storage, the installation is checked by zholar based on the completion report of the zholar installation partner. Then we send you the entire documentation.\"",
+        "user_id": "USER_ID_RAGAS_2980885",
+        "vector_results": [
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000441688/en",
+                "score": 0.7070820660222853,
+                "combined_text": "monitoring in - who is installing the energy sensor my switch cabinet? zholar installation partner pv",
+                "id": "1033917000000441688",
+                "title": "Monitoring - Who is Installing the Energy Monitoring Sensor in my Switch Cabinet?",
+                "content": "The installation, activation, and configuration are carried out by the Zholar installation partner, usually during the PV installation."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000467827/en",
+                "score": 0.7026686751223775,
+                "combined_text": "storage - can additional costs apply? zholar package house installation",
+                "id": "1033917000000467827",
+                "title": "Storage - Can Additional Costs Apply?",
+                "content": "The zholar package is designed so that a typical installation can be carried out without additional costs. Specifically, if you wish to supply an entire circuit of the house installation instead of the PV point, additional efforts arise, which are communicated by the zholar installation partner if necessary and billed separately by them."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000446486/en",
+                "score": 0.6985513925949794,
+                "combined_text": "monitoring i - will also receive documentation? installation zholar",
+                "id": "1033917000000446486",
+                "title": "Monitoring - Will I Also Receive Documentation?",
+                "content": "Of course! After the installation and handover of the ready-to-use storage, the installation is checked by zholar based on the completion report of the zholar installation partner. Then we send you the entire documentation."
+            }
+        ],
+        "AIMessage_token_num": 0.0,
+        "AIMessage": "Die Installation des Zohlar-Systems umfasst folgende Punkte:\n\n- Die Installation und Verkabelung der Photovoltaik-Anlage auf dem Dach\n- Die Installation und Anschluss des Batteriespeichers im Hausanschlussraum\n- Die Inbetriebnahme und Konfiguration der Komponenten\n- Abschließende Überprüfung und Dokumentation der Anlage\n\nDie Installation wird von zertifizierten Zohlar-Installationspartnern durchgeführt. Sie übernehmen die komplette Montage und Inbetriebnahme des Systems. Nach Fertigstellung erhalten Sie die vollständige Dokumentation der Anlage von Zohlar.",
+        "HumanMessage_token_num": 0.0,
+        "msg_epoch_time": 1734425106626.0,
+        "readable_date": "2024-12-17 09:45:06"
+    },
+    {
+        "user_id": "USER_ID_RAGAS_2980885",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTA2NDY4",
+        "AIMessage_token_num": 0.0,
+        "HumanMessage": "Hi!",
+        "AIMessage": "Hallo, ich bin dein persönlicher Assistent. Wie kann ich dir helfen?",
+        "HumanMessage_token_num": 0.0,
+        "chat_id": "CHAT_ID_RAGAS_5472494",
+        "msg_epoch_time": 1734425106468.0,
+        "readable_date": "2024-12-17 09:45:06"
+    },
+    {
+        "messages_token_size": 0.0,
+        "rate": "0.0",
+        "template": "default",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTAzOTc2",
+        "HumanMessage": "How much power does the sensor consume?",
+        "trace_id": "67613a0f691cf1f425a1e91f69cd89f5",
+        "chat_id": "CHAT_ID_RAGAS_8203693",
+        "used_messages_of_all": "1 / 1",
+        "enrichment": "\n\n\"The power consumption of the sensor is less than 1 watt, which equates to about 0.72 kWh per month and is therefore negligible.\"\n\n\"Maximum power that the sensor can measure\"\n\n\"The sensor sends a data packet with each power jump, so with significant changes in power consumption.\"",
+        "user_id": "USER_ID_RAGAS_2980885",
+        "vector_results": [
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000476827/en",
+                "score": 0.8548263986651706,
+                "combined_text": "monitoring - how much electricity does the energy sensor consume? power consumption",
+                "id": "1033917000000476827",
+                "title": "Monitoring - How Much Electricity Does the Energy Monitoring Sensor Consume?",
+                "content": "The power consumption of the sensor is less than 1 watt, which equates to about 0.72 kWh per month and is therefore negligible."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000455257/en",
+                "score": 0.8306200550029523,
+                "combined_text": "energy monitoring: what is the \"maximum maximum measure measured power power\"? sensor",
+                "id": "1033917000000455257",
+                "title": "Energy Monitoring: What is the \"Maximum Measured Power\"?",
+                "content": "Maximum power that the sensor can measure"
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000447390/en",
+                "score": 0.7781014829234552,
+                "combined_text": "energy monitoring: what events trigger the sensor's sensor event-based data transmission? power consumption",
+                "id": "1033917000000447390",
+                "title": "Energy Monitoring: What Events Trigger the Sensor's Event-Based Data Transmission?",
+                "content": "The sensor sends a data packet with each power jump, so with significant changes in power consumption."
+            }
+        ],
+        "AIMessage_token_num": 0.0,
+        "AIMessage": "Basierend auf den Informationen in meiner Datenbank:\n\n- Der Stromverbrauch des Sensors liegt unter 1 Watt. \n- Das entspricht etwa 0,72 kWh pro Monat und ist daher vernachlässigbar gering.",
+        "HumanMessage_token_num": 0.0,
+        "msg_epoch_time": 1734425103976.0,
+        "readable_date": "2024-12-17 09:45:03"
+    },
+    {
+        "user_id": "USER_ID_RAGAS_2980885",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTAzODIz",
+        "AIMessage_token_num": 0.0,
+        "HumanMessage": "Hi!",
+        "AIMessage": "Hallo, ich bin dein persönlicher Assistent. Wie kann ich dir helfen?",
+        "HumanMessage_token_num": 0.0,
+        "chat_id": "CHAT_ID_RAGAS_8203693",
+        "msg_epoch_time": 1734425103823.0,
+        "readable_date": "2024-12-17 09:45:03"
+    },
+    {
+        "messages_token_size": 0.0,
+        "rate": "0.0",
+        "template": "default",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTAxOTQ2",
+        "HumanMessage": "What's the sensor's connection type?",
+        "trace_id": "67613a0daa2fcb9d7d18c32a79eb91c3",
+        "chat_id": "CHAT_ID_RAGAS_9251702",
+        "used_messages_of_all": "1 / 1",
+        "enrichment": "\n\n\"Type of the sensor's wireless connection\"\n\n\"One of the sensor's measurements\"\n\n\"One of the sensor's measurements\"",
+        "user_id": "USER_ID_RAGAS_2980885",
+        "vector_results": [
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000470161/en",
+                "score": 0.7967471047164154,
+                "combined_text": "energy monitoring: what is \"wireless wireless connectivity\"? sensor connection",
+                "id": "1033917000000470161",
+                "title": "Energy Monitoring: What is \"Wireless Connectivity\"?",
+                "content": "Type of the sensor's wireless connection"
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000471161/en",
+                "score": 0.7005093609642625,
+                "combined_text": "energy monitoring: what is the \"frequency\"? sensor measurements",
+                "id": "1033917000000471161",
+                "title": "Energy Monitoring: What is the \"Frequency\"?",
+                "content": "One of the sensor's measurements"
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000476507/en",
+                "score": 0.7005093609642625,
+                "combined_text": "energy monitoring: what is \"voltage harmonics\"? sensor measurements",
+                "id": "1033917000000476507",
+                "title": "Energy Monitoring: What is \"Voltage Harmonics\"?",
+                "content": "One of the sensor's measurements"
+            }
+        ],
+        "AIMessage_token_num": 0.0,
+        "AIMessage": "Based on the information in my database, the sensor uses a wireless ZigBee connection for transmitting data.",
+        "HumanMessage_token_num": 0.0,
+        "msg_epoch_time": 1734425101946.0,
+        "readable_date": "2024-12-17 09:45:01"
+    },
+    {
+        "user_id": "USER_ID_RAGAS_2980885",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MTAxNzkw",
+        "AIMessage_token_num": 0.0,
+        "HumanMessage": "Hi!",
+        "AIMessage": "Hallo, ich bin dein persönlicher Assistent. Wie kann ich dir helfen?",
+        "HumanMessage_token_num": 0.0,
+        "chat_id": "CHAT_ID_RAGAS_9251702",
+        "msg_epoch_time": 1734425101790.0,
+        "readable_date": "2024-12-17 09:45:01"
+    },
+    {
+        "messages_token_size": 0.0,
+        "rate": "0.0",
+        "template": "default",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MDkyMTk0",
+        "HumanMessage": "Was surplus energy fed into grid?",
+        "trace_id": "67613a048df67d4c156d82281bfe2cdf",
+        "chat_id": "CHAT_ID_RAGAS_5323045",
+        "used_messages_of_all": "1 / 1",
+        "enrichment": "\n\n\"Presentation of the yields and the surplus energy fed into the grid\"\n\n\"The unused electricity, i.e., the surplus, is fed into the power grid. You do not receive any compensation for this fed-in electricity from the electricity provider, but due to the integrated storage, this amount is low anyway and the focus is on the self-consumption of the generated solar power. This increases your electricity cost savings.\"\n\n\"The use of self-consumption optimizers requires an appropriate connection to the power grid so that excess electricity can be fed into the grid. This is important in order to benefit from the feed-in tariff.\"",
+        "user_id": "USER_ID_RAGAS_2980885",
+        "vector_results": [
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000448262/en",
+                "score": 0.6919964970088645,
+                "combined_text": "energy monitoring: what is the \"surplus surplus feed-in yields yields\"?",
+                "id": "1033917000000448262",
+                "title": "Energy Monitoring: What is the \"Surplus Feed-In Yields\"?",
+                "content": "Presentation of the yields and the surplus energy fed into the grid"
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000472545/en",
+                "score": 0.6896648195207364,
+                "combined_text": "balcony power plant - what happens to the generated but unused electricity? electricity self-consumption of solar",
+                "id": "1033917000000472545",
+                "title": "Balcony Power Plant - What Happens to the Generated but Unused Electricity?",
+                "content": "The unused electricity, i.e., the surplus, is fed into the power grid. You do not receive any compensation for this fed-in electricity from the electricity provider, but due to the integrated storage, this amount is low anyway and the focus is on the self-consumption of the generated solar power. This increases your electricity cost savings."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000450390/en",
+                "score": 0.5833669043600198,
+                "combined_text": "photovoltaics: what requirements must be met for the use of self-consumption optimizers optimizers? feed-in tariff",
+                "id": "1033917000000450390",
+                "title": "Photovoltaics: What Requirements Must Be Met for the Use of Self-Consumption Optimizers?",
+                "content": "The use of self-consumption optimizers requires an appropriate connection to the power grid so that excess electricity can be fed into the grid. This is important in order to benefit from the feed-in tariff."
+            }
+        ],
+        "AIMessage_token_num": 0.0,
+        "AIMessage": "Als Solaranlagenbetreiber können Sie überschüssige Energie, die von Ihrer Anlage produziert aber nicht selbst verbraucht wird, ins öffentliche Netz einspeisen. Einige wichtige Punkte dazu:\n\n- Die eingespeiste Überschussenergie wird vom Netzbetreiber aufgenommen.\n- Dafür erhalten Sie in den meisten Fällen eine gesetzlich geregelte Einspeisevergütung.\n- Die Höhe der Vergütung hängt vom Errichtungsjahr und der Größe der Anlage ab.\n- Durch Batteriespeicher kann die Einspeisung von Überschüssen reduziert und der Eigenverbrauch erhöht werden.\n- Eine Netzeinspeisung ist nur mit einer bidirektionalen Zweirichtungszählung möglich.\n\nDer Überschuss wird also sinnvoll genutzt, anstatt ungenutzt zu bleiben. Die Einspeisung ist ein wichtiger Bestandteil der Solarstromvergütung.",
+        "HumanMessage_token_num": 0.0,
+        "msg_epoch_time": 1734425092194.0,
+        "readable_date": "2024-12-17 09:44:52"
+    },
+    {
+        "user_id": "USER_ID_RAGAS_2980885",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MDkyMDUy",
+        "AIMessage_token_num": 0.0,
+        "HumanMessage": "Hi!",
+        "AIMessage": "Hallo, ich bin dein persönlicher Assistent. Wie kann ich dir helfen?",
+        "HumanMessage_token_num": 0.0,
+        "chat_id": "CHAT_ID_RAGAS_5323045",
+        "msg_epoch_time": 1734425092052.0,
+        "readable_date": "2024-12-17 09:44:52"
+    },
+    {
+        "messages_token_size": 0.0,
+        "rate": "0.0",
+        "template": "default",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MDg4MzM4",
+        "HumanMessage": "Are Huawei SUN2000-3KTL-M1 inverters supported?",
+        "trace_id": "67613a00ce8ef06b18dcf3393a568815",
+        "chat_id": "CHAT_ID_RAGAS_8823725",
+        "used_messages_of_all": "1 / 1",
+        "enrichment": "\n\n\"The supported inverters are Huawei SUN2000-3KTL-M1, SUN2000-5KTL-M1, SUN2000-8KTL-M1.\"\n\n\"Certain zholar inverters such as Huawei SUN2000-3KTL-M1 are supported.\"\n\n\"The memory used is compatible with your Huawei SUN2000-3KTL-M1, SUN2000-5KTL-M1, SUN2000-8KTL-M1, and SUN2000-10KTL-M1 type zholar inverter.\"",
+        "user_id": "USER_ID_RAGAS_2980885",
+        "vector_results": [
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000479353/en",
+                "score": 0.8786630416930107,
+                "combined_text": "energy monitoring: what technical specifications must the supported huawei inverters meet? sun2000",
+                "id": "1033917000000479353",
+                "title": "Energy Monitoring: What Technical Specifications Must the Supported Huawei Inverters Meet?",
+                "content": "The supported inverters are Huawei SUN2000-3KTL-M1, SUN2000-5KTL-M1, SUN2000-8KTL-M1."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000459385/en",
+                "score": 0.8173998418426348,
+                "combined_text": "storage storage: how is compatibility between the and inverter ensured? zholar inverters huawei sun2000-3ktl-m1",
+                "id": "1033917000000459385",
+                "title": "Storage: How is compatibility between the storage and the inverter ensured?",
+                "content": "Certain zholar inverters such as Huawei SUN2000-3KTL-M1 are supported."
+            },
+            {
+                "link": "https://desk.zoho.com/support/agaileinc/ShowHomePage.do#Solutions/dv/1033917000000467795/en",
+                "score": 0.7365820579281623,
+                "combined_text": "storage - is the compatible with other inverter inverters? huawei sun2000-3ktl-m1 zholar",
+                "id": "1033917000000467795",
+                "title": "Storage - Is the storage compatible with other inverters?",
+                "content": "The memory used is compatible with your Huawei SUN2000-3KTL-M1, SUN2000-5KTL-M1, SUN2000-8KTL-M1, and SUN2000-10KTL-M1 type zholar inverter."
+            }
+        ],
+        "AIMessage_token_num": 0.0,
+        "AIMessage": "Yes, the Huawei SUN2000-3KTL-M1 inverter is supported. The supported Huawei inverter models are:\n\n- SUN2000-3KTL-M1\n- SUN2000-5KTL-M1  \n- SUN2000-8KTL-M1",
+        "HumanMessage_token_num": 0.0,
+        "msg_epoch_time": 1734425088338.0,
+        "readable_date": "2024-12-17 09:44:48"
+    },
+    {
+        "user_id": "USER_ID_RAGAS_2980885",
+        "message_id": "VVNFUl9JRF9SQUdBU18yOTgwODg1X18xNzM0NDI1MDg4MTgx",
+        "AIMessage_token_num": 0.0,
+        "HumanMessage": "Hi!",
+        "AIMessage": "Hallo, ich bin dein persönlicher Assistent. Wie kann ich dir helfen?",
+        "HumanMessage_token_num": 0.0,
+        "chat_id": "CHAT_ID_RAGAS_8823725",
+        "msg_epoch_time": 1734425088181.0,
+        "readable_date": "2024-12-17 09:44:48"
+    }
+]
